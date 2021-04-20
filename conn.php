@@ -11,17 +11,17 @@ try {
 } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
-
-// $sql = "SELECT Id, Gebruiker, Taak FROM list";
-// $result = $conn->query($sql);
-
-// if ($result->num_rows > 0) {
-//   // output data of each row
-//   while($row = $result->fetch_assoc()) {
-//     echo "id: " . $row["Id"]. " - Gebruiker: " . $row["Gebruiker"]. " Taak " . $row["Taak"]. "<br>";
-//   }
-// } else {
-//   echo "0 results";
-// }
-// $conn->close();
+//pdo
+$sql = "SELECT Id, Gebruiker, Taak FROM list";
+$result = $conn->query($sql);
+var_dump($result);
+if ($result->rowCount() > 0){
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["Id"]. " - Gebruiker: " . $row["Gebruiker"]. " Taak " . $row["Taak"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$conn = null;
 ?>
