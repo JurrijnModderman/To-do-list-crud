@@ -12,16 +12,16 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 //pdo
-$sql = "SELECT Id, Gebruiker, Taak FROM list";
-$result = $conn->query($sql);
-var_dump($result);
-if ($result->rowCount() > 0){
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["Id"]. " - Gebruiker: " . $row["Gebruiker"]. " Taak " . $row["Taak"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
+// $sql = "SELECT Id, Gebruiker, Taak FROM list";
+// $result = $conn->query($sql);
+// var_dump($result);
+// if ($result->rowCount() > 0){
+//   // output data of each row
+//   while($row = $result->fetch_assoc()) {
+//     echo "id: " . $row["Id"]. " - Gebruiker: " . $row["Gebruiker"]. " Taak " . $row["Taak"]. "<br>";
+//   }
+// } else {
+//   echo "0 results";
+// }
 $conn = null;
 ?>

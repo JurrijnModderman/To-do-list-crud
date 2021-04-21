@@ -5,8 +5,8 @@
 </head>
 <body>
 	<?php include 'conn.php';?>
-	<button id="Create" class="Create">Create</button>
-	<button id="Update" class="Update">Update</button>
-	<button id="Delete" class="Delete">Delete</button>
+	<li><a href="create.php">Create</a></li>
+	<li><a href="update.php">Update</a></li>
+	<li><a href="delete.php">Delete</a></li>
 </body>
 </html>
