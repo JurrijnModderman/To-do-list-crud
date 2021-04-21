@@ -1,10 +1,11 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$myDB = "to-do-list";
+
 
 function connection() {
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$myDB = "to-do-list";
 	try {
     	$conn = new PDO("mysql:host=$servername;dbname=$myDB", $username, $password);
     	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -12,7 +13,14 @@ function connection() {
 	} catch(PDOException $e) {
     	echo "Connection failed: " . $e->getMessage();
 	}
+	//aparte functie
+	$sql = 'SELECT * FROM list';
+	$query = $conn->prepare($sql);
+	$query->execute();
+	$all = $query->fetchAll();
 }
+
+connection();
 //pdo
 // $sql = "SELECT Id, Gebruiker, Taak FROM list";
 // $result = $conn->query($sql);
