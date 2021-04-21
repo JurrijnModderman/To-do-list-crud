@@ -1,5 +1,6 @@
 <?php
 
+
 function connection() {
 	$servername = "localhost";
 	$username = "root";
@@ -12,24 +13,14 @@ function connection() {
 	} catch(PDOException $e) {
     	echo "Connection failed: " . $e->getMessage();
 	}
-	return $conn;
 	//aparte functie
-	// $sql = 'SELECT * FROM list';
-	// $query = $conn->prepare($sql);
-	// $query->execute();
-	// $all = $query->fetchAll();
-}
-
-function getDataFromList() {
-	connection();
 	$sql = 'SELECT * FROM list';
 	$query = $conn->prepare($sql);
 	$query->execute();
 	$all = $query->fetchAll();
 }
 
-// connection();
-getDataFromList();
+connection();
 //pdo
 // $sql = "SELECT Id, Gebruiker, Taak FROM list";
 // $result = $conn->query($sql);
