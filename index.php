@@ -24,7 +24,7 @@
         <td><?php echo $row['Taak'] ?></td>
         <td><a href="create.php">Create</a></td>
 		<td><a href="update.php">Update</a></td>
-		<td><a href="delete.php?id=<?php echo $row['id'] ?>">Delete</a></td>
+		<td><a href="delete.php?Id=<?php echo $row['Id']?>">Delete</a></td>
     </tr>
 <?php
     }
