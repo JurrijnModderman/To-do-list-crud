@@ -1,4 +1,5 @@
 <?php
-	include 'conn.php';
+	include 'controller.php';
+	create();
 	// header('Location: index.php');
 ?>

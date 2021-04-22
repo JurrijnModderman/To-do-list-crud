@@ -5,7 +5,7 @@
 </head>
 <body>
 	<?php 
-	include 'conn.php';
+	include 'controller.php';
 	$all = getData();
 	?>
 
@@ -23,7 +23,7 @@
         <td><?php echo $row['Gebruiker'] ?></td>
         <td><?php echo $row['Taak'] ?></td>
         <td><a href="create.php">Create</a></td>
-		<td><a href="update.php">Update</a></td>
+		<td><a href="update.php?Id=<?php echo $row['Id']?>">Update</a></td>
 		<td><a href="delete.php?Id=<?php echo $row['Id']?>">Delete</a></td>
     </tr>
 <?php
