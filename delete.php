@@ -7,7 +7,6 @@
 		$query = $conn->prepare($sql);
 		$query->execute();
 		$all = $query->fetchAll();
-		return $all;
 	}
 	delete();
 	header('Location: index.php');
