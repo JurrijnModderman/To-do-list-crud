@@ -22,13 +22,12 @@
         <td><?php echo $row['Id'] ?></td>
         <td><?php echo $row['Gebruiker'] ?></td>
         <td><?php echo $row['Taak'] ?></td>
+        <td><a href="create.php">Create</a></td>
+		<td><a href="update.php">Update</a></td>
+		<td><a href="delete.php?id=<?php echo $row['id'] ?>">Delete</a></td>
     </tr>
 <?php
     }
 ?>        
-	
-	<li><a href="create.php">Create</a></li>
-	<li><a href="update.php">Update</a></li>
-	<li><a href="delete.php">Delete</a></li>
 </body>
 </html>
