@@ -4,7 +4,7 @@
 	<title>To-do-List</title>
 </head>
 <body>
-	<form action="controller.php">
+	<form action="controller.php" method="POST">
 		Gebruiker:<input type="Gebruiker" name="gebruikerValue">
 		Taak:<input type="Taak" name="taakValue">
 		<input type="submit" value="Update" name="submit">
