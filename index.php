@@ -16,7 +16,8 @@
         <th>Taak | </th>
     </tr>
  <?php
-  foreach ($all as $row) {
+  function showData() {
+  	foreach ($all as $row) {
  ?>   
     <tr>
         <td><?php echo $row['Id'] ?></td>
@@ -27,7 +28,10 @@
 		<td><a href="delete.php?Id=<?php echo $row['Id']?>">Delete</a></td>
     </tr>
 <?php
+    	}
+    	return $row;
     }
+    showData();
 ?>        
 </body>
 </html>
