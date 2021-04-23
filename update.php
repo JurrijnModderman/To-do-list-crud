@@ -5,8 +5,8 @@
 </head>
 <body>
 	<form action="controller.php" method="POST">
-		Gebruiker:<input type="Gebruiker" name="gebruikerValue">
-		Taak:<input type="Taak" name="taakValue">
+		Gebruiker:<input type="Gebruiker" name="gebruikerValue" value="<?php echo $row['Gebruiker']?>">
+		Taak:<input type="Taak" name="taakValue" value="<?php echo $row['Taak']?>">
 		<input type="submit" value="Update" name="submit">
 	</form>
 <?php
