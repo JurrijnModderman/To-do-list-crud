@@ -6,7 +6,6 @@
 <body>
 	<?php 
 		include 'index.php';
-		$row = getData();
 	?>
 	<form action="controller.php" method="POST">
 		Gebruiker:<input type="Gebruiker" name="gebruikerValue" value="<?php echo $row['Gebruiker']?>">
