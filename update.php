@@ -5,11 +5,12 @@
 </head>
 <body>
 	<?php 
-		include 'index.php';
+		include_once 'controller.php';
 	?>
-	<form action="controller.php" method="POST">
-		Gebruiker:<input type="Gebruiker" name="gebruikerValue" value="<?php echo $row['Gebruiker']?>">
-		Taak:<input type="Taak" name="taakValue" value="<?php echo $row['Taak']?>">
+	<form action="update()" method="POST">
+		<?php $id = $_GET['Id']?>
+		Gebruiker:<input type="Gebruiker" name="gebruikerValue" value="">
+		Taak:<input type="Taak" name="taakValue" value="">
 		<input type="submit" value="Update" name="submit">
 	</form>
 <!-- <?php
