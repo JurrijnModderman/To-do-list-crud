@@ -8,9 +8,12 @@
 		include_once 'controller.php';
 	?>
 	<form action="update()" method="POST">
-		<?php $id = $_GET['Id']?>
-		Gebruiker:<input type="Gebruiker" name="gebruikerValue" value="">
-		Taak:<input type="Taak" name="taakValue" value="">
+		<?php $id = $_GET['Id'];
+		$gebruikerValue = $_GET['gebruikerValue'];
+		$taakValue = $_GET['taakValue'];
+		?>
+		Gebruiker:<input type="Gebruiker" name="gebruikerValue" value="<?php echo  $gebruikerValue?>">
+		Taak:<input type="Taak" name="taakValue" value="<?php echo $taakValue?>">
 		<input type="submit" value="Update" name="submit">
 	</form>
 <!-- <?php
