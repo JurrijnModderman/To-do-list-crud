@@ -12,7 +12,7 @@
 		$gebruikerValue = $_GET['gebruikerValue'];
 		$taakValue = $_GET['taakValue'];
 		?>
-		Gebruiker:<input type="Gebruiker" name="gebruikerValue" value="<?php echo  $gebruikerValue?>">
+		Gebruiker:<input type="Gebruiker" name="gebruikerValue" value="<?php echo $gebruikerValue?>">
 		Taak:<input type="Taak" name="taakValue" value="<?php echo $taakValue?>">
 		<input type="submit" value="Update" name="submit">
 	</form>
