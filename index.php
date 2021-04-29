@@ -5,7 +5,7 @@
 </head>
 <body>
 	<?php 
-	include 'controller.php';
+	include 'conn.php';
 	$all = getData();
 	?>
 

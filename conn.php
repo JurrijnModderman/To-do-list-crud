@@ -21,6 +21,15 @@ function connection() {
 	// $all = $query->fetchAll();
 }
 
+function getData() {
+	$conn = connection();
+	$sql = 'SELECT * FROM list';
+	$query = $conn->prepare($sql);
+	$query->execute();
+	$all = $query->fetchAll();
+	return $all;
+}
+
 //pdo
 // $sql = "SELECT Id, Gebruiker, Taak FROM list";
 // $result = $conn->query($sql);
