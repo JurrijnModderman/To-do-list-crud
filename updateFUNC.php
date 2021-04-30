@@ -2,9 +2,9 @@
 	include 'conn.php';
 	function update() {
 		$conn = connection();
-		$id = $_GET['Id'];
-		$gebruikerValue = $_GET['gebruikerValue'];
-		$taakValue = $_GET['taakValue'];
+		$id = $_POST['Id'];
+		$gebruikerValue = $_POST['gebruiker'];
+		$taakValue = $_POST['taak'];
 		$sql = 'UPDATE list SET Gebruiker=$gebruikerValue, Taak=$taakValue WHERE Id = ' . $id;
 		$query = $conn->prepare($sql);
 		$query->execute();

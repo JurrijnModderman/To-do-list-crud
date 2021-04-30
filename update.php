@@ -7,14 +7,16 @@
 	<?php 
 		// include_once 'controller.php';
 		include 'conn.php';
+		$id = $_GET['Id'];
+		$gebruiker = $_GET['Gebruiker'];
+		$taak = $_GET['Taak'];
 	?>
 	<form action="updateFUNC.php" method="POST">
-		<?php $id = $_GET['Id'];
-		// $gebruikerValue = $_GET['gebruikerValue'];
-		// $taakValue = $_GET['taakValue'];
-		?>
-		Gebruiker:<input type="Gebruiker" name="gebruikerValue" value="">
-		Taak:<input type="Taak" name="taakValue" value="">
+		<input type="hidden" name="Id" value="<?php echo $id; ?>">
+		<!-- <input type="hidden" name="gebruiker" value="<?php echo $gebruiker; ?>">
+		<input type="hidden" name="taak" value="<?php echo $taak; ?>"> -->
+		Gebruiker:<input type="Gebruiker" name="gebruiker" value="<?php echo $gebruiker;?>">
+		Taak:<input type="Taak" name="taak" value="<?php echo $taak;?>">
 		<input type="submit" value="Update" name="submit">
 	</form>
 <!-- <?php
