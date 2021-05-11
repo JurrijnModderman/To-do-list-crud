@@ -23,7 +23,7 @@ function connection() {
 
 function getData() {
 	$conn = connection();
-	$sql = 'SELECT * FROM task';
+	$sql = 'SELECT * FROM list';
 	$query = $conn->prepare($sql);
 	$query->execute();
 	$all = $query->fetchAll();
