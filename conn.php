@@ -30,6 +30,15 @@ function getData() {
 	return $all;
 }
 
+function getDataTasks() {
+	$conn = connection();
+	$sql = 'SELECT * FROM task';
+	$query = $conn->prepare($sql);
+	$query->execute();
+	$all = $query->fetchAll();
+	return $all;
+}
+
 //pdo
 // $sql = "SELECT Id, Gebruiker, Taak FROM list";
 // $result = $conn->query($sql);

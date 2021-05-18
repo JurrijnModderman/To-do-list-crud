@@ -6,7 +6,7 @@
 <body>
 	<?php 
 	include 'conn.php';
-	$all = getData();
+	$all = getDataTasks();
 	?>
 
 <table style="border: 1px solid black">
