@@ -23,11 +23,11 @@
   foreach ($all as $row) {
  ?>   
     <tr>
-        <td><?php echo $row['List_Id'] ?></td>
-        <td><?php echo $row['Id'] ?></td>
-        <td><?php echo $row['Description'] ?></td>
-        <td><?php echo $row['Time'] ?></td>
-        <td><?php echo $row['Status'] ?></td>
+        <td><?php echo $row['List_Id'] ?> |</td>
+        <td><?php echo $row['Id'] ?> |</td>
+        <td><?php echo $row['Description'] ?> |</td>
+        <td><?php echo $row['Time'] ?> |</td>
+        <td><?php echo $row['Status'] ?> |</td>
 		<td><a href="update.php?List_Id=<?php echo $row['List_Id']?>&Id=<?php echo $row['Id']?>&Description=<?php echo $row['Description']?>&Time=<?php echo $row['Time']?>&Status=<?php echo $row['Status']?>&">Update</a></td>
 		<td><a href="delete.php?Id=<?php echo $row['Id']?>">Delete</a></td>
     </tr>
