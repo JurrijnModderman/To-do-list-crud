@@ -20,7 +20,19 @@
 		$query = $conn->prepare($sql);
 		$query->execute();
 		$all = $query->fetchAll();
+		return $all;
 		header('Location: index.php');
 	}
-	delete();
+	// delete();
+
+	function deleteTasks() {
+		$conn = connection();
+		$id = $_GET['Id']; 
+		$sql = 'DELETE  FROM task WHERE Id = ' . $id;
+		$query = $conn->prepare($sql);
+		$query->execute();
+		$all = $query->fetchAll();
+		return $all;
+		header('Location: indexTask.php');
+	}
 ?>
