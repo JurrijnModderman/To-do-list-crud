@@ -3,9 +3,9 @@
 	function update() {
 		$conn = connection();
 		$id = $_POST['Id'];
-		$gebruikerValue = $_POST['gebruiker'];
-		$taakValue = $_POST['taak'];
-		$sql = 'UPDATE list SET Gebruiker=$gebruikerValue, Taak=$taakValue WHERE Id = ' . $id;
+		$User = $_POST['User'];
+		$Task_Name = $_POST['Task_Name'];
+		$sql = 'UPDATE list SET User=$User, Task_Name=$Task_Name WHERE Id = ' . $id;
 		$query = $conn->prepare($sql);
 		$query->execute();
 		$all = $query->fetchAll();

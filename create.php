@@ -9,8 +9,8 @@
 	?>
 	
 	<form action="createFUNC.php" method="POST">
-		Gebruiker:<input type="Gebruiker" name="gebruiker" value="">
-		Taak:<input type="Taak" name="taak" value="">
+		Gebruiker:<input type="User" name="User" value="">
+		Taak:<input type="Task_Name" name="Task_Name" value="">
 		<input type="submit" value="Create" name="submit">
 	</form>
 </body>
