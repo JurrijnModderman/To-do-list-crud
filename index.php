@@ -17,7 +17,7 @@
   foreach ($all as $row) {
  ?>   
     <tr>
-        <td><a href="indexTask.php"><?php echo $row['Task_Name']?></a></td>
+        <td><a href="indexTask.php?Id=<?php echo $row['Id']?>&?List_Id=<?php echo $row['List_Id']?>"><?php echo $row['Task_Name']?></a></td>
     </tr>
 <?php
     }
