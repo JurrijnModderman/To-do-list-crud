@@ -3,9 +3,9 @@
 	function create() {
 		$conn = connection();
 		$User = $_POST['User'];
-		$Task_name = $_POST['Task_name'];
-		$sql = "INSERT INTO List (User, Task_name)
-  		VALUES ('$User', '$Task_name')";
+		$Task_Name = $_POST['Task_Name'];
+		$sql = "INSERT INTO List (User, Task_Name)
+  		VALUES ('$User', '$Task_Name')";
 		$query = $conn->prepare($sql);
 		$query->execute();
 		$all = $query->fetchAll();

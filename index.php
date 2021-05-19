@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>To-do-List</title>
+    <title>To-do-List</title>
 </head>
 <body>
-	<?php 
-	include 'conn.php';
-	$all = getData();
-	?>
+    <?php 
+    include 'conn.php';
+    $all = getData();
+    ?>
 
 <table style="border: 1px solid black">
     <tr>
-        <th>Id | </th>
-        <th>Gebruiker | </th>
-        <th>Taak | </th>
-        <td><a href="create.php">Create</a></td>
-        <td><a href="indexTask.php">Takenlijst</a></td>
+        <th>Lists</th>
     </tr>
  <?php
   foreach ($all as $row) {
  ?>   
     <tr>
-        <td><?php echo $row['Id'] ?></td>
-        <td><?php echo $row['Gebruiker'] ?></td>
-        <td><?php echo $row['Taak'] ?></td>
-		<td><a href="update.php?Id=<?php echo $row['Id']?>&Gebruiker=<?php echo $row['Gebruiker']?>&Taak=<?php echo $row['Taak']?>">Update</a></td>
-		<td><a href="delete.php?Id=<?php echo $row['Id']?>">Delete</a></td>
+        <td><a href="indexTask.php"><?php echo $row['Task_Name']?></a></td>
     </tr>
 <?php
     }
-?>        
+?>  
+    <tr>
+        <td><a href="create.php?Id=<?php echo $row['Id']?>">Create</a></td>  
+    </tr>   
 </body>
 </html>
