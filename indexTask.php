@@ -16,7 +16,6 @@
         <th>Status | </th>
         <td><a href="createTask.php?Id=<?php echo $_GET['Id']?>">Create</a></td>
         <td><a href="index.php">Back</a></td>
-        <td><a href="delete.php?Id=<?php echo $row['List_Id']?>">Delete List</a></td>
     </tr>
  <?php
   foreach ($all as $row) {
@@ -25,7 +24,7 @@
         <td><?php echo $row['Description'] ?> |</td>
         <td><?php echo $row['Time'] ?> |</td>
         <td><?php echo $row['Status'] ?> |</td>
-		<td><a href="update.php?List_Id=<?php echo $row['List_Id']?>&Id=<?php echo $row['Id']?>&Description=<?php echo $row['Description']?>&Time=<?php echo $row['Time']?>&Status=<?php echo $row['Status']?>">Update</a></td>
+		<td><a href="updateTask.php?List_Id=<?php echo $row['List_Id']?>&Id=<?php echo $row['Id']?>&Description=<?php echo $row['Description']?>&Time=<?php echo $row['Time']?>&Status=<?php echo $row['Status']?>">Update</a></td>
 		<td><a href="deleteTask.php?Id=<?php echo $row['List_Id']?>">Delete</a></td>
     </tr>
 <?php

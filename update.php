@@ -15,8 +15,8 @@
 		<input type="hidden" name="Id" value="<?php echo $id; ?>">
 		<!-- <input type="hidden" name="gebruiker" value="<?php echo $gebruiker; ?>">
 		<input type="hidden" name="taak" value="<?php echo $taak; ?>"> -->
-		Gebruiker:<input type="Gebruiker" name="User" value="<?php echo $User;?>">
-		Taak:<input type="Taak" name="Task_Name" value="<?php echo $Task_Name;?>">
+		User:<input type="User" name="User" value="<?php echo $User;?>">
+		Task_Name:<input type="Taak" name="Task_Name" value="<?php echo $Task_Name;?>">
 		<input type="submit" value="Update" name="submit">
 	</form>
 <!-- <?php
