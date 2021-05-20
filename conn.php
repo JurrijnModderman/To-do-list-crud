@@ -32,9 +32,8 @@ function getData() {
 
 function getDataTasks() {
 	$conn = connection();
-	$List_Id = $_GET['List_Id']; 
 	$id = $_GET['Id']; 
-	$sql = 'SELECT * FROM task WHERE $List_Id = ' . $id;
+	$sql = 'SELECT * FROM task WHERE List_Id = ' . $id;
 	$query = $conn->prepare($sql);
 	$query->execute();
 	$all = $query->fetchAll();
