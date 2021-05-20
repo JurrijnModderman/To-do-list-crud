@@ -2,10 +2,11 @@
 	include 'conn.php';
 	function create() {
 		$conn = connection();
-		$User = $_POST['User'];
-		$Task_Name = $_POST['Task_Name'];
-		$sql = "INSERT INTO List (User, Task_Name)
-  		VALUES ('$User', '$Task_Name')";
+		$Description = $_POST['Description'];
+		$Time = $_POST['Time'];
+		$Status = $_POST['Status'];
+		$sql = "INSERT INTO List (Description, Time, Status)
+  		VALUES ('$Description', '$Time', '$Status')";
 		$query = $conn->prepare($sql);
 		$query->execute();
 		$all = $query->fetchAll();
