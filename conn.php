@@ -1,6 +1,5 @@
 <?php
 
-
 function connection() {
 	$servername = "localhost";
 	$username = "root";
@@ -14,11 +13,6 @@ function connection() {
     	echo "Connection failed: " . $e->getMessage();
 	}
 	return $conn;
-	//aparte functie
-	// $sql = 'SELECT * FROM list';
-	// $query = $conn->prepare($sql);
-	// $query->execute();
-	// $all = $query->fetchAll();
 }
 
 function getData() {
@@ -32,25 +26,12 @@ function getData() {
 
 function getDataTasks() {
 	$conn = connection();
-	$id = $_GET['Id']; 
+	$id = $_GET['Id'];
 	$sql = 'SELECT * FROM task WHERE List_Id = ' . $id;
 	$query = $conn->prepare($sql);
 	$query->execute();
 	$all = $query->fetchAll();
 	return $all;
 }
-
-//pdo
-// $sql = "SELECT Id, Gebruiker, Taak FROM list";
-// $result = $conn->query($sql);
-// var_dump($result);
-// if ($result->rowCount() > 0){
-//   // output data of each row
-//   while($row = $result->fetch_assoc()) {
-//     echo "id: " . $row["Id"]. " - Gebruiker: " . $row["Gebruiker"]. " Taak " . $row["Taak"]. "<br>";
-//   }
-// } else {
-//   echo "0 results";
-// }
 $conn = null;
 ?>
