@@ -14,7 +14,7 @@
         <th>Description | </th>
         <th>Time | </th>
         <th>Status | </th>
-        <td><a href="create.php">Create</a></td>
+        <td><a href="create.php?Id=<?php echo $row['Id']?>">Create</a></td>
         <td><a href="index.php">Back</a></td>
     </tr>
  <?php

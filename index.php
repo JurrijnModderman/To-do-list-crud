@@ -14,7 +14,6 @@
         <th>Lists</th>
     </tr>
  <?php
- var_dump($all);
   foreach ($all as $row) {
  ?>   
     <tr>
