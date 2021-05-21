@@ -14,7 +14,7 @@
         <th>Description | </th>
         <th>Time | </th>
         <th>Status | </th>
-        <td><a href="createTask.php?Id=<?php echo $_GET['Id']?>">Create</a></td>
+        <td><a href="createTask.php?Id=<?php echo $_GET['List_Id']?>">Create</a></td>
         <td><a href="index.php">Back</a></td>
     </tr>
  <?php
