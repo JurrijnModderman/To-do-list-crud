@@ -17,8 +17,7 @@ function connection() {
 
 function getData() {
 	$conn = connection();
-	$List_Id = $_GET['List_Id'];
-	$sql = 'SELECT * FROM list WHERE id = ' . $List_Id;
+	$sql = 'SELECT * FROM list';
 	$query = $conn->prepare($sql);
 	$query->execute();
 	$all = $query->fetchAll();
