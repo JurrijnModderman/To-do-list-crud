@@ -18,7 +18,7 @@
   foreach ($all as $row) {
  ?>   
     <tr>
-        <td><a href='indexTask.php?Id=<?php echo $row['List_Id']?>'><?php echo $row['Task_Name']?></a></td>
+        <td><a href='indexTask.php?List_Id=<?php echo $row['Id']?>'><?php echo $row['Task_Name']?></a></td>
         <td><a href="update.php?Id=<?php echo $row['Id']?>&User=<?php echo $row['User']?>&Task_Name=<?php echo $row['Task_Name']?>">Update</a></td>
         <td><a href="delete.php?Id=<?php echo $row['Id']?>">Delete List</a></td>
     </tr>
