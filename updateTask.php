@@ -26,7 +26,7 @@
 			<input type="submit" value="Update" name="submit">
 		</form>
 		<br>
-		<a href="indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>" style="margin-right: 730px;">Back</a>
+		<a href="indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>" style="margin-right: 810px;">Back</a>
 	</div>
 </body>
 </html>
