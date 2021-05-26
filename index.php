@@ -9,15 +9,17 @@
     include 'conn.php';
     $all = getData();
     ?>
-<table style="border: 1px solid black">
+<div class="container">
+    <table class="table" style="border: 1px solid black;">
+  <thead>
     <tr>
-        <th>Lists</th>
+        <h3 style="text-align: center;">Lists</h3>
     </tr>
  <?php
  //loop to show all listnames and to crud them
   foreach ($all as $row) {
  ?>   
-    <tr>
+    <tr style="border: 1px solid black;">
         <td><a href='indexTask.php?List_Id=<?php echo $row['Id']?>&Task_Name=<?php echo $row['Task_Name']?>'><?php echo $row['Task_Name']?></a></td>
         <td><a href="update.php?Id=<?php echo $row['Id']?>&User=<?php echo $row['User']?>&Task_Name=<?php echo $row['Task_Name']?>">Update</a></td>
         <td><a href="delete.php?Id=<?php echo $row['Id']?>">Delete List</a></td>
@@ -25,8 +27,11 @@
 <?php
     }
 ?>  
+</tbody>
+</table>   
     <tr>
         <td><a href="create.php?Id=<?php echo $row['Id']?>">Create</a></td>  
-    </tr>   
+    </tr>  
+    </div> 
 </body>
 </html>
