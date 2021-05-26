@@ -3,6 +3,7 @@
 	//function to insert the new data into the database
 	function createTask() {
 		$conn = connection();
+		$Task_Name = $_POST['Task_Name'];
 		$List_Id = $_POST['List_Id'];
 		$Description = $_POST['Description'];
 		$Time = $_POST['Duration'];
@@ -12,7 +13,7 @@
 		$query = $conn->prepare($sql);
 		$query->execute();
 		$all = $query->fetchAll();
-		header("Location: indexTask.php?List_Id=$List_Id");
+		header("Location: indexTask.php?List_Id=$List_Id&Task_Name=$Task_Name");
 	}
 	createTask();
 ?>
