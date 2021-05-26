@@ -13,6 +13,7 @@
         <th>Lists</th>
     </tr>
  <?php
+ //loop to show all listnames and to crud them
   foreach ($all as $row) {
  ?>   
     <tr>

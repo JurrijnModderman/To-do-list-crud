@@ -1,5 +1,6 @@
 <?php
 	include 'conn.php';
+	//function to insert the new data into the database
 	function create() {
 		$conn = connection();
 		$User = $_POST['User'];

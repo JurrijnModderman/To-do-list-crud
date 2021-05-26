@@ -12,6 +12,7 @@
 		$Time = $_GET['Time'];
 		$Status = $_GET['Status'];
 	?>
+	<!-- form to change the current data from a task-->
 	<form action="updateTaskFUNC.php" method="POST">
 		<input type="hidden" name="Id" value="<?php echo $id; ?>">
 		<input type="hidden" name="List_Id" value="<?php echo $List_Id; ?>">

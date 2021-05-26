@@ -1,5 +1,6 @@
 <?php
 	include 'conn.php';
+	//function to delete a task
 	function delete() {
 		$conn = connection();
 		$List_Id = $_GET['List_Id'];

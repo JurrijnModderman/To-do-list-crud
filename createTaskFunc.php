@@ -1,5 +1,6 @@
 <?php
 	include 'conn.php';
+	//function to insert the new data into the database
 	function createTask() {
 		$conn = connection();
 		$List_Id = $_POST['List_Id'];

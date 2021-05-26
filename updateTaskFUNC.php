@@ -1,5 +1,6 @@
 <?php
 	include 'conn.php';
+	//function to update the task and put it into the database
 	function updateTask() {
 		$conn = connection();
 		$id = $_POST['Id'];

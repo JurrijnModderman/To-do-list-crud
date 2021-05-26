@@ -8,6 +8,7 @@
 	include 'conn.php';
 	$List_Id = $_GET['List_Id'];
 	?>
+	<!-- form to create a new task -->
 	<form action="createTaskFUNC.php" method="POST">
 		<input type="hidden" name="List_Id" value="<?php echo $List_Id; ?>">
 		Description:<input type="Description" name="Description" value="">

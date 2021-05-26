@@ -1,5 +1,6 @@
 <?php
 	include 'conn.php';
+	//function to delete a list
 	function delete() {
 		$conn = connection();
 		$id = $_GET['Id']; 

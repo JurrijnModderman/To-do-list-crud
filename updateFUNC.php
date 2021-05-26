@@ -1,5 +1,6 @@
 <?php
 	include 'conn.php';
+	//function to update the list and put it into the database
 	function update() {
 		$conn = connection();
 		$id = $_POST['Id'];

@@ -10,6 +10,7 @@
 		$User = $_GET['User'];
 		$Task_Name = $_GET['Task_Name'];
 	?>
+	<!-- form to change the current data from a list-->
 	<form action="updateFUNC.php" method="POST">
 		<input type="hidden" name="Id" value="<?php echo $id; ?>">
 		User:<input type="User" name="User" value="<?php echo $User;?>">

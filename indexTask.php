@@ -16,6 +16,7 @@
         <td><a href="index.php">Back</a></td>
     </tr>
  <?php
+ //loop to show the task menu and to crud them
   foreach ($all as $row) {
  ?>   
     <tr>
