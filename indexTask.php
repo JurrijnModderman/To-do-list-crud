@@ -20,9 +20,9 @@
         </h3>
     </tr>
     <tr style="border-top: 1px solid black;">
-      <th scope="col">Description</th>
-      <th scope="col">Time(in minutes)</th>
-      <th scope="col">Status</th>
+      <th>Description</th>
+      <th>Time(in minutes)</th>
+      <th>Status</th>
       <td><a href="index.php">Back</a></td>
       <th></th>
     </tr>
