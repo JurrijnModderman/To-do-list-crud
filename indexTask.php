@@ -16,6 +16,7 @@
         <th>Status | </th>
         <td><a href="index.php">Back</a></td>
     </tr> -->
+    <div class="container">
     <table class="table" style="border: 1px solid black;">
   <thead>
     <tr>
@@ -60,5 +61,6 @@
     <tr>
         <td><a href='createTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>'>Create</a></td> 
     </tr>  
+    </div>
 </body>
 </html>
