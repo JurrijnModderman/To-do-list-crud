@@ -8,7 +8,6 @@
 	include 'conn.php';
 	$all = getDataTasks();
 	?>
-
 <table style="border: 1px solid black">
     <tr>
         <th>Description | </th>

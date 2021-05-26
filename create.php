@@ -7,7 +7,6 @@
 	<?php
 	include 'conn.php';
 	?>
-	
 	<form action="createFUNC.php" method="POST">
 		User:<input type="User" name="User" value="">
 		Task_Name:<input type="Task_Name" name="Task_Name" value="">

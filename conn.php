@@ -1,5 +1,4 @@
 <?php
-
 function connection() {
 	$servername = "localhost";
 	$username = "root";
@@ -14,7 +13,6 @@ function connection() {
 	}
 	return $conn;
 }
-
 function getData() {
 	$conn = connection();
 	$sql = 'SELECT * FROM list';
@@ -23,7 +21,6 @@ function getData() {
 	$all = $query->fetchAll();
 	return $all;
 }
-
 function getDataTasks() {
 	$conn = connection();
 	$List_Id = $_GET['List_Id'];

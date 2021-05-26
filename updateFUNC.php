@@ -11,7 +11,4 @@
 		header('Location: index.php');
 	}
 	update();
-
-
-
 ?>

@@ -7,9 +7,7 @@
     <?php 
     include 'conn.php';
     $all = getData();
-    // print_r($all);
     ?>
-
 <table style="border: 1px solid black">
     <tr>
         <th>Lists</th>

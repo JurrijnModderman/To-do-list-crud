@@ -1,6 +1,5 @@
 <?php
 	include 'conn.php';
-
 	function delete() {
 		$conn = connection();
 		$List_Id = $_GET['List_Id'];
@@ -9,7 +8,6 @@
 		$query = $conn->prepare($sql);
 		$query->execute();
 		$all = $query->fetchAll();
-		// return $all;
 		header("Location: indexTask.php?List_Id=$List_Id");
 	}
 	delete();

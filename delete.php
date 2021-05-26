@@ -1,6 +1,5 @@
 <?php
 	include 'conn.php';
-
 	function delete() {
 		$conn = connection();
 		$id = $_GET['Id']; 
@@ -8,7 +7,6 @@
 		$query = $conn->prepare($sql);
 		$query->execute();
 		$all = $query->fetchAll();
-		// return $all;
 		header('Location: index.php');
 	}
 	delete();

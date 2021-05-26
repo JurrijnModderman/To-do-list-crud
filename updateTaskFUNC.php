@@ -13,7 +13,4 @@
 		header("Location: indexTask.php?List_Id=$List_Id");
 	}
 	updateTask();
-
-
-
 ?>
