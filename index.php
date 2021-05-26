@@ -20,9 +20,9 @@
   foreach ($all as $row) {
  ?>   
     <tr style="border: 1px solid black;">
-        <td><a href='indexTask.php?List_Id=<?php echo $row['Id']?>&Task_Name=<?php echo $row['Task_Name']?>'><?php echo $row['Task_Name']?></a></td>
-        <td><a href="update.php?Id=<?php echo $row['Id']?>&User=<?php echo $row['User']?>&Task_Name=<?php echo $row['Task_Name']?>">Update</a></td>
-        <td><a href="delete.php?Id=<?php echo $row['Id']?>">Delete List</a></td>
+        <td><a style="text-decoration: none;" href='indexTask.php?List_Id=<?php echo $row['Id']?>&Task_Name=<?php echo $row['Task_Name']?>'><?php echo $row['Task_Name']?></a></td>
+        <td><a style="text-decoration: none;" href="update.php?Id=<?php echo $row['Id']?>&User=<?php echo $row['User']?>&Task_Name=<?php echo $row['Task_Name']?>">Update</a></td>
+        <td><a style="text-decoration: none;" href="delete.php?Id=<?php echo $row['Id']?>">Delete List</a></td>
     </tr>
 <?php
     }
@@ -30,7 +30,7 @@
 </tbody>
 </table>   
     <tr>
-        <td><a href="create.php?Id=<?php echo $row['Id']?>">Create</a></td>  
+        <td><a style="text-decoration: none;" href="create.php?Id=<?php echo $row['Id']?>">Create</a></td>  
     </tr>  
     </div> 
 </body>

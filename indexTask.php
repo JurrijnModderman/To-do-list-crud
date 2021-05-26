@@ -23,7 +23,7 @@
       <th>Description</th>
       <th>Time(in minutes)</th>
       <th>Status</th>
-      <td><a href="index.php">Back</a></td>
+      <td><a style="text-decoration: none;" href="index.php">Back</a></td>
       <th></th>
     </tr>
   </thead>   
@@ -36,8 +36,8 @@
       <td><?php echo $row['Description'] ?> |</td>
       <td><?php echo $row['Time'] ?> |</td>
       <td><?php echo $row['Status'] ?> |</td>
-      <td><a href="updateTask.php?List_Id=<?php echo $row['List_Id']?>&Id=<?php echo $row['Id']?>&Description=<?php echo $row['Description']?>&Time=<?php echo $row['Time']?>&Status=<?php echo $row['Status']?>&Task_Name=<?php echo $_GET['Task_Name']?>">Update</a></td>
-        <td><a href="deleteTask.php?Id=<?php echo $row['Id']?>&List_Id=<?php echo $row['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>">Delete</a></td>
+      <td><a style="text-decoration: none;" href="updateTask.php?List_Id=<?php echo $row['List_Id']?>&Id=<?php echo $row['Id']?>&Description=<?php echo $row['Description']?>&Time=<?php echo $row['Time']?>&Status=<?php echo $row['Status']?>&Task_Name=<?php echo $_GET['Task_Name']?>">Update</a></td>
+        <td><a style="text-decoration: none;" href="deleteTask.php?Id=<?php echo $row['Id']?>&List_Id=<?php echo $row['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>">Delete</a></td>
     </tr>
 <?php
     }
@@ -45,7 +45,7 @@
   </tbody>
 </table>   
     <tr>
-        <td><a href='createTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>'>Create</a></td> 
+        <td><a style="text-decoration: none;" href='createTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>'>Create</a></td> 
     </tr>  
     </div>
 </body>
