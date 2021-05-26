@@ -16,7 +16,7 @@
 			<input type="hidden" name="List_Id" value="<?php echo $List_Id; ?>">
 			<input type="hidden" name="Task_Name" value="<?php echo $Task_Name; ?>">
 			Description:<input type="Description" name="Description" value="">
-			Time:<input type="Duration" name="Duration" value="">
+			Time(in minutes):<input type="Duration" name="Duration" value="">
 			Status:<input type="Status" name="Status" value="">
 			<input type="submit" value="Create" name="submit">
 		</form>
