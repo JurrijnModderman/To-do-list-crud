@@ -53,8 +53,8 @@
     </tr>
     <tr style="border-top: 1px solid black;">
       <th>Description</th>
-      <th><a style="text-decoration: none;" href="indexTask.php">Time(in minutes)</a></th>
-      <th><a style="text-decoration: none;" href='indexTask.php?Status=<?php echo $_GET['Status']?>''>Status</a></th>
+      <th><a style="text-decoration: none;" href='indexTask.php?Time=<?php echo $_GET['Time']?>'>Time(in minutes)</a></th>
+      <th><a style="text-decoration: none;" href='indexTask.php?Status=<?php echo $_GET['Status']?>'>Status</a></th>
       <td><a style="text-decoration: none;" href="index.php">Back</a></td>
       <th></th>
     </tr>
