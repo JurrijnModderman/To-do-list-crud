@@ -27,7 +27,7 @@ function getData() {
 function getDataTasks($case=0) {
 	$conn = connection();
 	$List_Id = $_GET['List_Id'];
-	$sql = "SELECT * FROM task WHERE List_Id = " . $List_Id . " ORDER BY Time, Status "  . ($case = 0)? "ASC" : "DESC";
+	$sql = "SELECT * FROM task WHERE List_Id = " . $List_Id . " ORDER BY Time, Status " . $case = 0? "ASC" : "DESC";
 	$query = $conn->prepare($sql);
 	$query->execute();
 	$all = $query->fetchAll();

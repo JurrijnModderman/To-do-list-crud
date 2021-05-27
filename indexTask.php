@@ -7,7 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<?php 
 	include 'conn.php';
-  $all = getDataTasks(0);
+  $number = 1;
+  if ($number % 2) {
+    $all = getDataTasks(0);
+  } else {
+    $all = getDataTasks(1);
+  }
+  $number++;
+  var_dump($number);
+  
 	?>
     <div class="container">
     <table class="table" style="border: 1px solid black;">
@@ -21,11 +29,10 @@
     </tr>
     <tr style="border-top: 1px solid black;">
       <th>Description</th>
-      <th>Time</th>
+      <th>Time(in minutes)</th>
       <th>Status</th>
-      <td><a style="text-decoration: none;" href="indexTask.php">Sort</a></td>
+      <td><a style="text-decoration: none;" href='indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>'>Sort</a></td>
       <td><a style="text-decoration: none;" href="index.php">Back</a></td>
-      <th></th>
     </tr>
   </thead>   
  <tbody>
