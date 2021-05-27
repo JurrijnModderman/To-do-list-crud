@@ -8,38 +8,39 @@
 	<?php 
 	include 'conn.php';
 	$all = getDataTasks();
-  $status = False;
-  function orderStatus() {
-    $status =! $status;
-    $conn = connection();
-    $sql = 'SELECT Status FROM task';
-    $query = $conn->prepare($sql);
-    $query->execute();
-    $all = $query->fetchAll();
-    var_dump($all);
-    if ($status =! True) {
-      sort($all);
-    } else {
-      rsort($all);
-    }
-  }
-   orderStatus();
+  // $status = False;
+  // function orderStatus() {
+  //   $status = !$status;
+  //   $conn = connection();
+  //   $List_Id = $_GET['List_Id'];
+  //   $sql = 'SELECT Status FROM task WHERE List_Id = ' . $List_Id;;
+  //   $query = $conn->prepare($sql);
+  //   $query->execute();
+  //   $all = $query->fetchAll();
+  //   if ($status != True) {
+  //     sort($all);
+  //   } else {
+  //     rsort($all);
+  //   }
+  //   var_dump($all);
+  // }
+  //  orderStatus();
 
-    function orderTime() {
-    $status =! $status;
-    $conn = connection();
-    $sql = 'SELECT Time FROM task';
-    $query = $conn->prepare($sql);
-    $query->execute();
-    $all = $query->fetchAll();
-    var_dump($all);
-    if ($status =! True) {
-      sort($all);
-    } else {
-      rsort($all);
-    }
-  }
-   orderTime();
+  //   function orderTime() {
+  //   $status =! $status;
+  //   $conn = connection();
+  //   $sql = 'SELECT Time FROM task';
+  //   $query = $conn->prepare($sql);
+  //   $query->execute();
+  //   $all = $query->fetchAll();
+  //   var_dump($all);
+  //   if ($status =! True) {
+  //     sort($all);
+  //   } else {
+  //     rsort($all);
+  //   }
+  // }
+  //  orderTime();
 	?>
     <div class="container">
     <table class="table" style="border: 1px solid black;">
@@ -54,7 +55,7 @@
     <tr style="border-top: 1px solid black;">
       <th>Description</th>
       <th><a style="text-decoration: none;" href='indexTask.php?Time=<?php echo $_GET['Time']?>'>Time(in minutes)</a></th>
-      <th><a style="text-decoration: none;" href='indexTask.php?Status=<?php echo $_GET['Status']?>'>Status</a></th>
+      <th><a style="text-decoration: none;" href='indexTask.php?Task_Name=<?php echo $_GET['Task_Name']?>&List_Id=<?php echo $_GET['List_Id']?>&Status=false'>Status</a></th>
       <td><a style="text-decoration: none;" href="index.php">Back</a></td>
       <th></th>
     </tr>
