@@ -7,14 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<?php 
 	include 'conn.php';
-  $number = 1;
-  if ($number % 2) {
+  if (isset($_GET['ASC'])) {
+    $isASC = filter_var($_GET['ASC'], FILTER_VALIDATE_BOOLEAN) ;
+    $isASC = !$isASC;
+  } else {
+    $isASC = true;
+  }
+  if ($isASC) {
     $all = getDataTasks(0);
   } else {
     $all = getDataTasks(1);
   }
-  $number++;
-  var_dump($number);
   
 	?>
     <div class="container">
@@ -31,7 +34,7 @@
       <th>Description</th>
       <th>Time(in minutes)</th>
       <th>Status</th>
-      <td><a style="text-decoration: none;" href='indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>'>Sort</a></td>
+      <td><a style="text-decoration: none;" href='indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>&ASC=<?php echo $isASC ? "true" : "false"?>'>Sort</a></td>
       <td><a style="text-decoration: none;" href="index.php">Back</a></td>
     </tr>
   </thead>   
