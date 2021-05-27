@@ -8,6 +8,22 @@
 	<?php 
 	include 'conn.php';
 	$all = getDataTasks();
+  $status = False;
+  function orderStatus() {
+    $status =! $status;
+    $conn = connection();
+    $sql = 'SELECT Status FROM task';
+    $query = $conn->prepare($sql);
+    $query->execute();
+    $all = $query->fetchAll();
+    var_dump($all);
+    if ($status =! True) {
+      sort($all);
+    } else {
+      rsort($all);
+    }
+  }
+   orderStatus();
 	?>
     <div class="container">
     <table class="table" style="border: 1px solid black;">
@@ -21,8 +37,8 @@
     </tr>
     <tr style="border-top: 1px solid black;">
       <th>Description</th>
-      <th>Time(in minutes)</th>
-      <th>Status</th>
+      <th><a style="text-decoration: none;" href="indexTask.php">Time(in minutes)</a></th>
+      <th><a style="text-decoration: none;" href='indexTask.php?Status=<?php echo $_GET['Status']?>''>Status</a></th>
       <td><a style="text-decoration: none;" href="index.php">Back</a></td>
       <th></th>
     </tr>
