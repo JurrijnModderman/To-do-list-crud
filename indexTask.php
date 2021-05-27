@@ -7,14 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<?php 
 	include 'conn.php';
-  // if (isset($_GET['Status']) == False) {
-  //   $all = getDataTasks('Time', ' ASC');
-  // } else if (isset($_GET['Time']) == ) {
-
-  // } else {
-  //   $all = getDataTasks();
-  // }
-  $all = getDataTasks('Time', ' ASC');
+  $all = getDataTasks(0);
 	?>
     <div class="container">
     <table class="table" style="border: 1px solid black;">
@@ -28,8 +21,9 @@
     </tr>
     <tr style="border-top: 1px solid black;">
       <th>Description</th>
-      <th><a style="text-decoration: none;" href='indexTask.php?Task_Name=<?php echo $_GET['Task_Name']?>&List_Id=<?php echo $_GET['List_Id']?>&Time=<?php echo $_GET['Time']?>'>Time(in minutes)</a></th>
-      <th><a style="text-decoration: none;" href='indexTask.php?Task_Name=<?php echo $_GET['Task_Name']?>&List_Id=<?php echo $_GET['List_Id']?>&Status=false'>Status</a></th>
+      <th>Time</th>
+      <th>Status</th>
+      <td><a style="text-decoration: none;" href="indexTask.php">Sort</a></td>
       <td><a style="text-decoration: none;" href="index.php">Back</a></td>
       <th></th>
     </tr>
