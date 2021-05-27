@@ -24,6 +24,22 @@
     }
   }
    orderStatus();
+
+    function orderTime() {
+    $status =! $status;
+    $conn = connection();
+    $sql = 'SELECT Time FROM task';
+    $query = $conn->prepare($sql);
+    $query->execute();
+    $all = $query->fetchAll();
+    var_dump($all);
+    if ($status =! True) {
+      sort($all);
+    } else {
+      rsort($all);
+    }
+  }
+   orderTime();
 	?>
     <div class="container">
     <table class="table" style="border: 1px solid black;">
