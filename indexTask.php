@@ -5,8 +5,22 @@
 </head>
 <body>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-	<?php 
+	<?php
 	include 'conn.php';
+  // $isOrder;
+  // function sortArray($order, $table) {
+  //   if (isset($_GET[$order])) {
+  //     $isOrder = filter_var($_GET[$order], FILTER_VALIDATE_BOOLEAN);
+  //     $isOrder = !$isOrder;
+  //     $all = getDataTasks($table, 1);
+  //     return $all;
+  //   } else {
+  //     $isOrder = true;
+  //     $all = getDataTasks($table, 0);
+  //     return $all;
+  //   }
+  // }
+  // $all = sortArray('ASC ', 'Time ');
   if (isset($_GET['ASC'])) {
     // filter(zorgt ervoor dat de var kan veranderen, filter validate boolean (maakt er een boolean van))
     $isASC = filter_var($_GET['ASC'], FILTER_VALIDATE_BOOLEAN) ;
