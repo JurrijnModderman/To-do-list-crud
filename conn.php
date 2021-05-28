@@ -24,10 +24,10 @@ function getData() {
 	return $all;
 }
 //function to get the data from task
-function getDataTasks($table="Time ", $case=0) {
+function getDataTasks($case=0) {
 	$conn = connection();
 	$List_Id = $_GET['List_Id'];
-	$sql = "SELECT * FROM task WHERE List_Id = " . $List_Id . " ORDER BY " . $table . ($case == 0? "ASC" : "DESC");
+	$sql = "SELECT * FROM task WHERE List_Id = " . $List_Id . " ORDER BY Time " . ($case == 0? "ASC" : "DESC");
 	$query = $conn->prepare($sql);
 	$query->execute();
 	$all = $query->fetchAll();
