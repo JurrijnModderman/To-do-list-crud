@@ -8,15 +8,24 @@
 	<?php 
 	include 'conn.php';
   if (isset($_GET['ASC'])) {
+    // filter(zorgt ervoor dat de var kan veranderen, filter validate boolean (maakt er een boolean van))
     $isASC = filter_var($_GET['ASC'], FILTER_VALIDATE_BOOLEAN) ;
     $isASC = !$isASC;
+    $all = getDataTasks("Time ", 1);
   } else {
     $isASC = true;
+    $all = getDataTasks("Time ", 0);
   }
-  if ($isASC) {
-    $all = getDataTasks(0);
+  if (isset($_GET['DESC'])) {
+    $isDESC = filter_var($_GET['DESC'], FILTER_VALIDATE_BOOLEAN) ;
+    $isDESC = !$isDESC;
   } else {
-    $all = getDataTasks(1);
+    $isDESC = true;
+  }
+  if ($isDESC) {
+    $all = getDataTasks("Status " , 0);
+  } else {
+    $all = getDataTasks("Status ", 1);
   }
   
 	?>
@@ -32,10 +41,11 @@
     </tr>
     <tr style="border-top: 1px solid black;">
       <th>Description</th>
-      <th>Time(in minutes)</th>
-      <th>Status</th>
-      <td><a style="text-decoration: none;" href='indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>&ASC=<?php echo $isASC ? "true" : "false"?>'>Sort</a></td>
+      <th><a style="text-decoration: none;" href='indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>&DESC=<?php echo $isDESC ? "true" : "false"?>&ASC=<?php echo $isASC ? "true" : "false"?>'>Time(in minutes)</a></th>
+      <th><a style="text-decoration: none;" href='indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>&ASC=<?php echo $isASC ? "true" : "false"?>&DESC=<?php echo $isDESC ? "true" : "false"?>'>Status</a></th>
+      <!-- <td><a style="text-decoration: none;" href='indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>&ASC=<?php echo $isASC ? "true" : "false"?>'>Sort</a></td> -->
       <td><a style="text-decoration: none;" href="index.php">Back</a></td>
+      <th></th>
     </tr>
   </thead>   
  <tbody>
