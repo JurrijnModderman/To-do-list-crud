@@ -21,6 +21,7 @@
   //   }
   // }
   // $all = sortArray('ASC ', 'Time ');
+  //2 buttons
   if (isset($_GET['ASC'])) {
     // filter(zorgt ervoor dat de var kan veranderen, filter validate boolean (maakt er een boolean van))
     $isASC = filter_var($_GET['ASC'], FILTER_VALIDATE_BOOLEAN) ;
@@ -41,7 +42,18 @@
   } else {
     $all = getDataTasks("Status ", 1);
   }
-  
+  // 1 sort button
+  // if (isset($_GET['ASC'])) {
+  //   $isASC = filter_var($_GET['ASC'], FILTER_VALIDATE_BOOLEAN) ;
+  //   $isASC = !$isASC;
+  // } else {
+  //   $isASC = true;
+  // }
+  // if ($isASC) {
+  //   $all = getDataTasks(0);
+  // } else {
+  //   $all = getDataTasks(1);
+  // }
 	?>
     <div class="container">
     <table class="table" style="border: 1px solid black;">
