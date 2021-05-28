@@ -28,7 +28,6 @@ function getDataTasks($case=0) {
 	$conn = connection();
 	$List_Id = $_GET['List_Id'];
 	$sql = "SELECT * FROM task WHERE List_Id = " . $List_Id . " ORDER BY Time " . ($case == 0? "ASC" : "DESC");
-	// echo $sql;
 	$query = $conn->prepare($sql);
 	$query->execute();
 	$all = $query->fetchAll();
