@@ -9,9 +9,9 @@
 	include 'conn.php';
 	?>
 	<!-- form to create a new List -->
-	<div class="center" style="text-align: center;">
+	<div class="center" style="text-align: center; padding-top: 30px;">
 		<h3>Create a new List!</h3>
-		<form action="createFUNC.php" method="POST">
+		<form action="createFUNC.php" method="POST" style="padding-top: 30px;">
 			User:<input type="User" name="User" value="">
 			Task_Name:<input type="Task_Name" name="Task_Name" value="">
 			<input type="submit" value="Create" name="submit">

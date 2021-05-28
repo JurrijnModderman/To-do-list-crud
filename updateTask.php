@@ -15,9 +15,9 @@
 		$Task_Name = $_GET['Task_Name'];
 	?>
 	<!-- form to change the current data from a task-->
-	<div class="center" style="text-align: center;">
+	<div class="center" style="text-align: center; padding-top: 30px;">
 		<h3>Update a Task!</h3>
-		<form action="updateTaskFUNC.php" method="POST">
+		<form action="updateTaskFUNC.php" method="POST" style="padding-top: 30px;">
 			<input type="hidden" name="Id" value="<?php echo $id; ?>">
 			<input type="hidden" name="List_Id" value="<?php echo $List_Id; ?>">
 			<input type="hidden" name="Task_Name" value="<?php echo $Task_Name; ?>">

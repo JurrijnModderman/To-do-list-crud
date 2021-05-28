@@ -11,9 +11,9 @@
 	$Task_Name = $_GET['Task_Name'];
 	?>
 	<!-- form to create a new task -->
-	<div class="center" style="text-align: center;">
+	<div class="center" style="text-align: center; padding-top: 30px;">
 		<h3>Create a new Task!</h3>
-		<form action="createTaskFUNC.php" method="POST">
+		<form action="createTaskFUNC.php" method="POST" style="padding-top: 30px;">
 			<input type="hidden" name="List_Id" value="<?php echo $List_Id; ?>">
 			<input type="hidden" name="Task_Name" value="<?php echo $Task_Name; ?>">
 			Description:<input type="Description" name="Description" value="">

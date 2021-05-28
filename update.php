@@ -12,9 +12,9 @@
 		$Task_Name = $_GET['Task_Name'];
 	?>
 	<!-- form to change the current data from a list-->
-	<div class="center" style="text-align: center;">
+	<div class="center" style="text-align: center; padding-top: 30px;">
 		<h3>Update a List!</h3>
-		<form action="updateFUNC.php" method="POST">
+		<form action="updateFUNC.php" method="POST" style="padding-top: 30px;">
 			<input type="hidden" name="Id" value="<?php echo $id; ?>">
 			User:<input type="User" name="User" value="<?php echo $User;?>">
 			Task_Name:<input type="Taak" name="Task_Name" value="<?php echo $Task_Name;?>">
