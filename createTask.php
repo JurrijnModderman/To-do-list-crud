@@ -4,6 +4,7 @@
 	<title>To-do-List</title>
 </head>
 <body>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<?php
 	include 'conn.php';
 	$List_Id = $_GET['List_Id'];
@@ -21,7 +22,7 @@
 			<input type="submit" value="Create" name="submit">
 		</form>
 		<br>
-		<a href="indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>" style="margin-right: 810px;">Back</a>
+		<a href="indexTask.php?List_Id=<?php echo $_GET['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>" style="margin-right: 843px;">Back</a>
 	</div>
 </body>
 </html>

@@ -44,9 +44,9 @@
  //loop to show the task menu and to crud them
   foreach ($all as $row) {
 ?>
-      <td><?php echo $row['Description'] ?> |</td>
-      <td><?php echo $row['Time'] ?> |</td>
-      <td><?php echo $row['Status'] ?> |</td>
+      <td><?php echo $row['Description'] ?></td>
+      <td><?php echo $row['Time'] ?></td>
+      <td><?php echo $row['Status'] ?></td>
       <td><a style="text-decoration: none;" href="updateTask.php?List_Id=<?php echo $row['List_Id']?>&Id=<?php echo $row['Id']?>&Description=<?php echo $row['Description']?>&Time=<?php echo $row['Time']?>&Status=<?php echo $row['Status']?>&Task_Name=<?php echo $_GET['Task_Name']?>">Update</a></td>
         <td><a style="text-decoration: none;" href="deleteTask.php?Id=<?php echo $row['Id']?>&List_Id=<?php echo $row['List_Id']?>&Task_Name=<?php echo $_GET['Task_Name']?>">Delete</a></td>
     </tr>
