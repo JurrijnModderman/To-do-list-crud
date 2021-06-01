@@ -8,11 +8,15 @@
 		$Description = $_POST['Description'];
 		$Time = $_POST['Duration'];
 		$Status = $_POST['Status'];
-		$sql = "INSERT INTO task (Description, Time, Status, List_Id)
-  		VALUES ('$Description', '$Time', '$Status', '$List_Id')";
-		$query = $conn->prepare($sql);
-		$query->execute();
-		$all = $query->fetchAll();
+		$stmt = $conn->prepare("INSERT INTO task (Description, Time, Status, List_Id)
+  		VALUES (:Description, :Duration, :Status, :List_Id)");
+ 		$stmt->bindParam(':Description', $Description);
+ 		$stmt->bindParam(':Duration', $Time);
+ 		$stmt->bindParam(':Status', $Status);
+ 		$stmt->bindParam(':List_Id', $List_Id);
+		// $query = $conn->prepare($stmt);
+		$stmt->execute();
+		$all = $stmt->fetchAll();
 		header("Location: indexTask.php?List_Id=$List_Id&Task_Name=$Task_Name");
 	}
 	createTask();
