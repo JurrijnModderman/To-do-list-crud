@@ -25,22 +25,22 @@ function getData() {
 }
 //function to get the data from task
 //function getDataTasks($sortField = 'time', $sortOrder = 'asc') {
-function getDataTasks($case = 0, $sortField = 'Time', $sortOrder = 'asc') {
+function getDataTasks($case = 0, $sortField = 'Time', $sortOrder = 'ASC') {
 	$conn = connection();
 	$listId = $_GET['List_Id'];
 	//$sql = "SELECT * FROM task WHERE List_Id = " . $List_Id . " ORDER BY Time " . ($case == 0? "ASC" : "DESC");
 
-	$sql = "SELECT * FROM task WHERE List_id = :ListId ORDER BY :orderBy ASC";
-	$query = $conn->prepare($sql);
-	$query->bindParam(':ListId', $listId, PDO::PARAM_STR);
-	$query->bindParam(':orderBy', $sortField, PDO::PARAM_STR);
-	//$query->bindParam(':orderDirection', $sortOrder, PDO::PARAM_INT);
+	$stmt = $conn->prepare("SELECT * FROM task WHERE List_id = :ListId ORDER BY :orderBy :orderDirection");
+	// $query = $conn->prepare($sql);
+	$stmt->bindParam(':ListId', $listId, PDO::PARAM_STR);
+	$stmt->bindParam(':orderBy', $sortField, PDO::PARAM_STR);
+	$stmt->bindParam(':orderDirection', $sortOrder, PDO::PARAM_STR);
 
-	$query->execute();
+	$stmt->execute();
 
 
 
-	$all = $query->fetchAll();
+	$all = $stmt->fetchAll();
 	return $all;
 }
 $conn = null;
