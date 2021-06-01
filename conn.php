@@ -30,9 +30,9 @@ function getDataTasks($case = 0, $sortField = 'Time', $sortOrder = 'asc') {
 	$listId = $_GET['List_Id'];
 	//$sql = "SELECT * FROM task WHERE List_Id = " . $List_Id . " ORDER BY Time " . ($case == 0? "ASC" : "DESC");
 
-	$sql = "SELECT * FROM task WHERE List_id = :listId ORDER BY :orderBy ASC";
+	$sql = "SELECT * FROM task WHERE List_id = :ListId ORDER BY :orderBy ASC";
 	$query = $conn->prepare($sql);
-	$query->bindParam(':listId', $listId, PDO::PARAM_STR);
+	$query->bindParam(':ListId', $listId, PDO::PARAM_STR);
 	$query->bindParam(':orderBy', $sortField, PDO::PARAM_STR);
 	//$query->bindParam(':orderDirection', $sortOrder, PDO::PARAM_INT);
 
