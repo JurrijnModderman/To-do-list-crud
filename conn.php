@@ -30,17 +30,18 @@ function getDataTasks($case = 0, $sortField = 'Time', $sortOrder = 'ASC') {
 	$listId = $_GET['List_Id'];
 	//$sql = "SELECT * FROM task WHERE List_Id = " . $List_Id . " ORDER BY Time " . ($case == 0? "ASC" : "DESC");
 
-	$stmt = $conn->prepare("SELECT * FROM task WHERE List_id = :ListId ORDER BY :orderBy :orderDirection");
+	$stmt = $conn->prepare("SELECT * FROM task WHERE List_id = :ListId ORDER BY :orderBy " . $sortOrder);
 	// $query = $conn->prepare($sql);
 	$stmt->bindParam(':ListId', $listId, PDO::PARAM_STR);
 	$stmt->bindParam(':orderBy', $sortField, PDO::PARAM_STR);
-	$stmt->bindParam(':orderDirection', $sortOrder, PDO::PARAM_STR);
+	// $stmt->bindParam(':orderDirection', $sortOrder, PDO::PARAM_STR);
 
 	$stmt->execute();
 
 
 
 	$all = $stmt->fetchAll();
+	var_dump($stmt);
 	return $all;
 }
 $conn = null;

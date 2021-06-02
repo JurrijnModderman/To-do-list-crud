@@ -14,9 +14,9 @@
     $isASC = true;
   }
   if ($isASC) {
-    $all = getDataTasks(0);
+    $all = getDataTasks(0, 'Time', 'ASC');
   } else {
-    $all = getDataTasks(1);
+    $all = getDataTasks(1, 'Time', 'DESC');
   }
 	?>
     <div class="container">
